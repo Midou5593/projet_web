@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Formation JS</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <br />
+        <h1 id="gros_titre">Le BOM</h1>
+        <p id ="p"></p>
+        <script>
+            var para = document.getElementById('p');
+            var loc = navigator.geolocation;
+            
+            (function(){
+                if(loc){
+                    loc.getCurrentPosition(coordonnees);
+                }else{
+                    para.innerHTML = 'Localisation non disponible';
+                }
+            }
+            )();
+            
+            function coordonnees(x){
+                para.innerHTML =
+                    'Latitude : ' + x.coords.latitude +
+                    '<br>Longitude : ' + x.coords.longitude;
+            }
+            
+        </script>
+    </body>
+</html>

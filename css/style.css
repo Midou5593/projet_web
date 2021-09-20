@@ -1,0 +1,8 @@
+.spectacular {
+  color: rgb(42, 175, 64);
+  font-size: 50px;
+  transform: translateX(40%);
+}
+.main-title {
+  transition: all 0.5s ease;
+}
